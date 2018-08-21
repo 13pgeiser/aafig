@@ -206,6 +206,6 @@ def setup(app):
     app.connect('doctree-read', render_aafig_images)
     app.add_config_value('aafig_format', DEFAULT_FORMATS, 'html')
     app.add_config_value('aafig_default_options', dict(), 'html')
-
+    return { 'parallel_read_safe' : True }
 
 # vim: set expandtab shiftwidth=4 softtabstop=4 :
