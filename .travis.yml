@@ -6,7 +6,7 @@ install:
   - pip wheel . -w dist
 script:
   - cd dist
-  - find . -type f -printf '[%P](%p)\n' >index.md
+  - find . -type f -printf '[%P](%p)  \n' >index.md
   - python -m markdown2 index.md >index.html
 deploy:
   provider: pages
