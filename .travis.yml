@@ -1,12 +1,12 @@
 language: python
 python:
-  - "2.7"
+  - "3.5"
 install:
   - pip install markdown2
   - pip wheel . -w dist
 script:
   - cd dist
-  - find . -type f -printf '[%P](%p)  \n' >index.md
+  - find . -type f -printf '[%P](%p)\n' >index.md
   - python -m markdown2 index.md >index.html
 deploy:
   provider: pages
