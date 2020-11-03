@@ -198,7 +198,7 @@ def render_aafigure(app, text, options):
     extra = None
     if options['format'].lower() == 'svg':
         extra = visitor.get_size_attrs()
-        f = file(metadata_fname, 'w')
+        f = open(metadata_fname, 'w')
         f.write(extra)
         f.close()
 
