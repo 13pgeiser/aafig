@@ -2,7 +2,7 @@ language: minimal
 services:
   - docker
 script:
-  - make -C docker
+  - /bin/bash docker.sh
 deploy:
   provider: pages
   skip-cleanup: true
